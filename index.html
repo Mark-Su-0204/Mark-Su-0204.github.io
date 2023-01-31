@@ -64,10 +64,10 @@
       <div class="outer">
         <section id="main">
   
-    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-建站过程" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2023/01/31/hello-world/" class="article-date">
-  <time datetime="2023-01-31T05:43:12.072Z" itemprop="datePublished">2023-01-31</time>
+    <a href="/2023/01/31/%E5%BB%BA%E7%AB%99%E8%BF%87%E7%A8%8B/" class="article-date">
+  <time datetime="2023-01-30T16:00:00.000Z" itemprop="datePublished">2023-01-31</time>
 </a>
     
   </div>
@@ -78,7 +78,71 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2023/01/31/hello-world/">Hello World</a>
+      <a class="article-title" href="/2023/01/31/%E5%BB%BA%E7%AB%99%E8%BF%87%E7%A8%8B/">建站过程</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>尝试用<code>hexo</code>搭建了一个个人博客，希望可以发一点读的论文的总结，也算是督促自己多读论文和多记笔记（但是目前还没有，呃呃），之后也希望能发一些学习的笔记和心得（如果有的话，呃呃）。这里就先记录一下搭建博客的过程，总结一下写博客的流程（主要是怕自己忘了，深感现在的记忆力大不如前，学过的东西不常用就很容易忘，所以多整理一些总结性的笔记总是好的）。</p>
+<h3 id="环境"><a href="#环境" class="headerlink" title="环境"></a>环境</h3><p><code>git</code>、<code>node</code>、换源<code>cnpm</code>、<code>github</code>创建仓库就不多说了。</p>
+<p>安装hexo：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cnpm install -g hexo-cli</span><br></pre></td></tr></table></figure>
+
+<p>创建hexo博客：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo init myblog</span><br></pre></td></tr></table></figure>
+
+<h3 id="部署"><a href="#部署" class="headerlink" title="部署"></a>部署</h3><p>在<code>_config.yml</code>文件中修改：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repository: https://github.com/Mark-Su-0204/Mark-Su-0204.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
+
+<p><code>repository</code>是创建的<code>github</code>仓库的地址，分支就选择<code>master</code></p>
+<p>修改完成之后就可以通过：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo d</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">or</span></span><br><span class="line">hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>将博客部署到仓库。</p>
+<p>由于特殊的仓库命名，可以直接通过 <a target="_blank" rel="noopener" href="https://mark-su-0204.github.io/">https://mark-su-0204.github.io/</a> 直接访问。</p>
+<h3 id="写博客"><a href="#写博客" class="headerlink" title="写博客"></a>写博客</h3><p><code>master</code>分支只保存生成好的博客内容，因此再创建一个<code>dev</code>分支来保存博客的源码（包括原始的<code>markdown</code>文档。</p>
+<p>写博客：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new &quot;&lt;博客名&gt;&quot;</span><br></pre></td></tr></table></figure>
+
+<p>会在<code>source/_posts</code>中生成相应的<code>markdown</code>文档，直接对其进行编辑即可。</p>
+<p>更新博客：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo clean # 清除之前的静态文件</span><br><span class="line">hexo g # or hexo generate 构建静态文件</span><br><span class="line">hexo d # or hexo deploy 部署</span><br></pre></td></tr></table></figure>
+
+<p>这一操作会更新<code>master</code>分支。</p>
+<p>备份源码：</p>
+<p>在<code>dev</code>分支上<code>commit+push</code>即可。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2023/01/31/%E5%BB%BA%E7%AB%99%E8%BF%87%E7%A8%8B/" data-id="cldjux2rd0001i0jua6ecdicu" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2023/01/30/hello-world/" class="article-date">
+  <time datetime="2023-01-29T16:00:00.000Z" itemprop="datePublished">2023-01-30</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2023/01/30/hello-world/">Hello World</a>
     </h1>
   
 
@@ -103,71 +167,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2023/01/31/hello-world/" data-id="cldjuotnb0000zmju62yh9zpe" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-建站过程" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2023/01/09/%E5%BB%BA%E7%AB%99%E8%BF%87%E7%A8%8B/" class="article-date">
-  <time datetime="2023-01-09T02:19:06.000Z" itemprop="datePublished">2023-01-09</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2023/01/09/%E5%BB%BA%E7%AB%99%E8%BF%87%E7%A8%8B/">建站过程</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="建站过程"><a href="#建站过程" class="headerlink" title="建站过程"></a>建站过程</h1><p>尝试用<code>hexo</code>搭建了一个个人博客，希望可以发一点读的论文的总结，也算是督促自己多读论文和多记笔记（但是目前还没有，呃呃），之后也希望能发一些学习的笔记和心得（如果有的话，呃呃）。这里就先记录一下搭建博客的过程，总结一下写博客的流程（主要是怕自己忘了，深感现在的记忆力大不如前，学过的东西不常用就很容易忘，所以多整理一些总结性的笔记总是好的）。</p>
-<h3 id="环境"><a href="#环境" class="headerlink" title="环境"></a>环境</h3><p><code>git</code>、<code>node</code>、换源<code>cnpm</code>、<code>github</code>创建仓库就不多说了。</p>
-<p>安装hexo：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cnpm install -g hexo-cli</span><br></pre></td></tr></table></figure>
-
-<p>创建hexo博客：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo init myblog</span><br></pre></td></tr></table></figure>
-
-<h3 id="部署"><a href="#部署" class="headerlink" title="部署"></a>部署</h3><p>在<code>_config.yml</code>文件中修改：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repository: https://github.com/Mark-Su-0204/Mark-Su-0204.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
-
-<p><code>repository</code>是创建的<code>github</code>仓库的地址，分支就选择<code>master</code></p>
-<p>修改完成之后就可以通过：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo d</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">or</span></span><br><span class="line">hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>将博客部署到仓库。</p>
-<p>由于特殊的仓库命名，可以直接通过 <a target="_blank" rel="noopener" href="https://mark-su-0204.github.io/">https://mark-su-0204.github.io/</a> 直接访问。</p>
-<h3 id="写博客"><a href="#写博客" class="headerlink" title="写博客"></a>写博客</h3><p><code>master</code>分支只保存生成好的博客内容，因此再创建一个<code>dev</code>分支来保存博客的源码（包括原始的<code>markdown</code>文档。</p>
-<p>写博客：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new &quot;&lt;博客名&gt;&quot;</span><br></pre></td></tr></table></figure>
-
-<p>会在<code>source/_posts</code>中生成相应的<code>markdown</code>文档，直接对其进行编辑即可。</p>
-<p>更新博客：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo c # or hexo clean 清除之前的静态文件</span><br><span class="line">hexo g # or hexo generate 构建静态文件</span><br><span class="line">hexo d # or hexo deploy 部署</span><br></pre></td></tr></table></figure>
-
-<p>这一操作会更新<code>master</code>分支。</p>
-<p>备份源码：</p>
-<p>在<code>dev</code>分支上<code>commit+push</code>即可。</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2023/01/09/%E5%BB%BA%E7%AB%99%E8%BF%87%E7%A8%8B/" data-id="cldjuotnf0001zmju74vi0nnl" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2023/01/30/hello-world/" data-id="cldjux2r70000i0ju88d8ehyb" class="article-share-link">Share</a>
       
       
     </footer>
@@ -208,11 +208,11 @@
       <ul>
         
           <li>
-            <a href="/2023/01/31/hello-world/">Hello World</a>
+            <a href="/2023/01/31/%E5%BB%BA%E7%AB%99%E8%BF%87%E7%A8%8B/">建站过程</a>
           </li>
         
           <li>
-            <a href="/2023/01/09/%E5%BB%BA%E7%AB%99%E8%BF%87%E7%A8%8B/">建站过程</a>
+            <a href="/2023/01/30/hello-world/">Hello World</a>
           </li>
         
       </ul>
